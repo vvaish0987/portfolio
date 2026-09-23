@@ -21,27 +21,22 @@ export function Section({
 }
 
 /**
- * Numbered eyebrow above a display title, separated by a hairline — the
+ * Section number above a display title, separated by a hairline — the
  * repeating structural motif across the page.
  */
 export function SectionHeading({
   index,
-  eyebrow,
   title,
   className = "",
 }: {
   index: string;
-  eyebrow: string;
   title: ReactNode;
   className?: string;
 }) {
   return (
     <header className={`mb-14 md:mb-20 ${className}`}>
       <Reveal>
-        <div className="flex items-baseline gap-4">
-          <span className="label text-accent">{index}</span>
-          <span className="label">{eyebrow}</span>
-        </div>
+        <span className="label text-accent">{index}</span>
         <div className="rule mt-4 mb-8" />
         <h2 className="max-w-3xl font-display text-headline text-balance">
           {title}

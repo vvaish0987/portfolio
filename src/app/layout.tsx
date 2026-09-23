@@ -27,10 +27,10 @@ const geistMono = Geist_Mono({
 
 const title = `${person.name} — ${person.role}`;
 const description =
-  "MCA graduate and Python engineer working across data pipelines, analytics and applied machine learning. Selected projects, experience and contact.";
+  "Software Engineer (MCA, 2026) with hands-on experience across the full software development lifecycle — designing, developing, testing, debugging and deploying applications in Python, Flask and REST APIs.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vaishnavivk.vercel.app"),
+  metadataBase: new URL(person.links.portfolio),
   title: {
     default: title,
     template: `%s — ${person.name}`,
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "Vaishnavi V K",
-    "data engineer",
-    "python developer",
-    "machine learning",
-    "data analyst",
-    "portfolio",
-    "Bangalore",
+    "Software Engineer",
+    "Python",
+    "Flask",
+    "REST APIs",
+    "Machine Learning",
+    "NLP",
   ],
   authors: [{ name: person.name }],
   creator: person.name,

@@ -1,4 +1,4 @@
-import { contact, person } from "@/lib/content";
+import { person } from "@/lib/content";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -6,6 +6,7 @@ const CHANNELS = [
   { label: "Email", value: person.email, href: `mailto:${person.email}` },
   { label: "LinkedIn", value: "in/vaishnavivk2003", href: person.links.linkedin },
   { label: "GitHub", value: "vvaish0987", href: person.links.github },
+  { label: "Portfolio", value: "vaishnavi-dun.vercel.app", href: person.links.portfolio },
   { label: "Phone", value: person.phone, href: `tel:${person.phone.replace(/\s/g, "")}` },
 ];
 
@@ -13,10 +14,7 @@ export function Contact() {
   return (
     <Section id="contact" className="pb-16 md:pb-24">
       <Reveal>
-        <div className="flex items-baseline gap-4">
-          <span className="label text-accent">06</span>
-          <span className="label">{contact.eyebrow}</span>
-        </div>
+        <span className="label text-accent">06</span>
         <div className="rule mt-4 mb-12" />
       </Reveal>
 
@@ -24,14 +22,8 @@ export function Contact() {
         <div className="md:col-span-7">
           <Reveal>
             <h2 className="font-display text-display leading-[0.95]">
-              {contact.title}
+              Contact
             </h2>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="mt-8 max-w-lg text-base leading-[1.75] text-muted">
-              {contact.body}
-            </p>
           </Reveal>
 
           <Reveal delay={0.18}>

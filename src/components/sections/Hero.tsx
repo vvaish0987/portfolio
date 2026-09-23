@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { hero, person } from "@/lib/content";
+import { hero } from "@/lib/content";
 import { RevealLines } from "@/components/ui/Reveal";
 
 // WebGL never runs on the server, and the bundle shouldn't block first paint.
@@ -53,12 +53,6 @@ export function Hero() {
           transition={{ duration: 0.8, ease: EASE }}
           className="flex items-center gap-3"
         >
-          {person.available && (
-            <span className="relative flex size-1.5">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
-            </span>
-          )}
           <span className="label">{hero.eyebrow}</span>
         </motion.div>
 
@@ -115,9 +109,8 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.1 }}
         style={reduced ? undefined : { opacity: contentOpacity }}
-        className="absolute inset-x-0 bottom-8 z-10 mx-auto flex w-full max-w-[76rem] items-end justify-between px-6 sm:px-10 lg:px-14"
+        className="absolute inset-x-0 bottom-8 z-10 mx-auto flex w-full max-w-[76rem] items-end justify-end px-6 sm:px-10 lg:px-14"
       >
-        <span className="label hidden sm:block">{person.location}</span>
         <span className="label flex items-center gap-3">
           Scroll
           <span aria-hidden className="relative block h-8 w-px bg-line-strong">

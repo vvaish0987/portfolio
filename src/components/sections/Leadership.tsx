@@ -1,4 +1,4 @@
-import { achievements, leadership } from "@/lib/content";
+import { achievements, certifications, leadership } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -7,8 +7,7 @@ export function Leadership() {
     <Section id="leadership">
       <SectionHeading
         index="05"
-        eyebrow="Leadership & Recognition"
-        title="Delivery is usually a communication problem."
+        title="Leadership Experience"
       />
 
       <div className="grid gap-14 md:grid-cols-12 md:gap-10">
@@ -38,7 +37,7 @@ export function Leadership() {
         <div className="md:col-span-5">
           <Reveal>
             <h3 className="label border-t border-line pt-7">
-              Achievements & Certifications
+              Achievements
             </h3>
             <ul className="mt-7 space-y-6">
               {achievements.map((item) => (
@@ -53,6 +52,22 @@ export function Leadership() {
                       {item.detail}
                     </p>
                   </div>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="label mt-12">Certifications</h3>
+            <ul className="mt-5 space-y-4">
+              {certifications.map((cert) => (
+                <li key={cert.title} className="flex gap-4">
+                  <span
+                    aria-hidden
+                    className="mt-[0.6em] block h-px w-3 shrink-0 bg-accent"
+                  />
+                  <p className="text-ink">
+                    {cert.title}{" "}
+                    <span className="text-sm text-muted">({cert.issuer})</span>
+                  </p>
                 </li>
               ))}
             </ul>

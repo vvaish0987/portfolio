@@ -7,8 +7,7 @@ export function Experience() {
     <Section id="experience">
       <SectionHeading
         index="02"
-        eyebrow="Experience"
-        title="Where I've worked, and what I actually did there."
+        title="Experience"
       />
 
       <ol className="space-y-16">
@@ -24,9 +23,6 @@ export function Experience() {
 
                 <div className="md:col-span-8">
                   <p className="text-lg text-ink">{job.role}</p>
-                  <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-                    {job.summary}
-                  </p>
 
                   <ul className="mt-7 space-y-3.5">
                     {job.points.map((point, i) => (
@@ -39,17 +35,6 @@ export function Experience() {
                           className="absolute left-0 top-[0.7em] block h-px w-3 bg-accent"
                         />
                         {point}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <ul className="mt-8 flex flex-wrap gap-2">
-                    {job.stack.map((tech) => (
-                      <li
-                        key={tech}
-                        className="rounded-full border border-line px-3 py-1 font-mono text-[0.6875rem] tracking-wide text-faint"
-                      >
-                        {tech}
                       </li>
                     ))}
                   </ul>
@@ -73,6 +58,7 @@ export function Experience() {
                 <div>
                   <p className="text-ink">{entry.institution}</p>
                   <p className="mt-1 text-sm text-muted">{entry.qualification}</p>
+                  <p className="mt-1 text-sm text-faint">{entry.location}</p>
                 </div>
                 <p className="label shrink-0 sm:text-right">{entry.period}</p>
               </li>
